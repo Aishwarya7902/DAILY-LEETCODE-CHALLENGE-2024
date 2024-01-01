@@ -1,5 +1,6 @@
 PROBLEM : https://leetcode.com/problems/assign-cookies/description/?envType=daily-question&envId=2024-01-01
 VIDEO (MIK BHAIYA):  https://www.youtube.com/watch?v=oyzF9AsOUQ8
+Company Tags    : Amazon, Meta
 
 /*
 LESSON 💖
@@ -39,5 +40,31 @@ public:
             }
         }
         return result;
+    }
+};
+
+
+/*
+OPTIMISATION
+//T.C : O(mlogm + nlogn)
+//S.C : O(1)
+*/
+
+class Solution {
+public:
+
+    int findContentChildren(vector<int>& g, vector<int>& s) {
+        
+        sort(begin(g),end(g));
+        sort(begin(s),end(s));
+        int m=g.size();
+        int n=s.size();
+        
+        int i=0,j=0;
+        while(i<m && j<n){
+            if(g[i]<=s[j])i++;
+            j++;
+        }
+       return i; 
     }
 };
