@@ -2,6 +2,13 @@ PROBLEM : https://leetcode.com/problems/assign-cookies/description/?envType=dail
 VIDEO (MIK BHAIYA):  https://www.youtube.com/watch?v=oyzF9AsOUQ8
 
 /*
+LESSON 💖
+Ek min greed wale bache pe ek badi size ka cookie waste karna bewakoofi hogi na
+*/
+
+
+
+/*
 BRUTE FORCE : DID ON MY OWN 😎
 TC: O(nlogn + mlogm)
 SC:
