@@ -2,7 +2,7 @@ PROBLEM:https://leetcode.com/problems/leaf-similar-trees/description/?envType=da
 VIDEO(MIK BHAIYA):
 
 /*
-  BRUTE FORCE
+  BRUTE FORCE (solved on my own)
   algo: put all leaf nodes of tree 1 in a vector , repeat the same for tree 2 ....check if vector 1 == vector 2
   TC: O(n)
   SC: O(n)
