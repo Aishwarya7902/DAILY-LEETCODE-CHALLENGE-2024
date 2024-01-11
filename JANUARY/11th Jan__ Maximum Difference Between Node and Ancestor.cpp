@@ -2,6 +2,8 @@ PROBLEM :https://leetcode.com/problems/maximum-difference-between-node-and-ances
 
 VIDEO(MIK BHAIYA): https://www.youtube.com/watch?v=cvekQzmBdcs
 
+Company Tags  : Google, Microsoft, Amazon
+
 /*
   BRUTE FORCE ( SOLVED ON MY OWN ❤️)
   ALGO:
