@@ -1,6 +1,6 @@
 PROBLEM :https://leetcode.com/problems/maximum-difference-between-node-and-ancestor/?envType=daily-question&envId=2024-01-11
 
-VIDEO(MIK BHAIYA):
+VIDEO(MIK BHAIYA): https://www.youtube.com/watch?v=cvekQzmBdcs
 
 /*
   BRUTE FORCE ( SOLVED ON MY OWN ❤️)
@@ -38,5 +38,32 @@ public:
         result=INT_MIN;
         solve(root);
         return result;
+    }
+};
+
+
+
+/*
+  OPTIMAL APPROACH
+  TC:O(N)
+  SC:O(1)
+  */
+
+
+class Solution {
+public:
+    int findMaxVal(TreeNode* root,int minV,int maxV){
+        if(root==NULL){
+            return abs(minV-maxV);
+        }
+
+        minV=min(minV,root->val);
+        maxV=max(maxV,root->val);
+        int left=findMaxVal(root->left,minV,maxV);
+        int right=findMaxVal(root->right,minV,maxV);
+        return max(left,right);
+    }
+    int maxAncestorDiff(TreeNode* root) {
+        return findMaxVal(root,root->val,root->val);
     }
 };
