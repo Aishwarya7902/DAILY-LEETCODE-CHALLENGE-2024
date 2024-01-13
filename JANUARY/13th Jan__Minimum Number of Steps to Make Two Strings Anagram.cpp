@@ -1,6 +1,8 @@
 PROBLEM : https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram/description/?envType=daily-question&envId=2024-01-13
 
-VIDEO : (MIK BHAIYA)
+VIDEO : (MIK BHAIYA) https://www.youtube.com/watch?v=dDQTlfWvzqE
+Problem Name : Minimum Number of Steps to Make Two Strings Anagram
+Company Tags  : Google
 
   /*
 
