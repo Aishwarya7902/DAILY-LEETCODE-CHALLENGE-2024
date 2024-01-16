@@ -36,12 +36,12 @@ public:
         //swap val and lastElement
         vec.back()=val;
         vec[indx]=lastElement;
-
+        mp[lastElement]=indx;
         //remove val from map and vec;
         vec.pop_back();
         mp.erase(val);
 
-        mp[lastElement]=indx;
+        
         return true;
         
     }
