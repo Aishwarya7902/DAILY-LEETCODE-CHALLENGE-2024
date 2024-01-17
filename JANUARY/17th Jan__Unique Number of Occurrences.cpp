@@ -1,6 +1,8 @@
 PROBLEM :https://leetcode.com/problems/unique-number-of-occurrences/?envType=daily-question&envId=2024-01-17
 VIDEO (MIK BHAIYA): https://www.youtube.com/watch?v=b2_rw2NZkr8
-
+Company Tags : Google, Twitter, Amazon, Netflix
+Problem Name : Unique Number of Occurrences
+ 
 
 /*
   BRUTE FORCE (DID IT ON MY OWN)
