@@ -1,5 +1,7 @@
-PROBLEM :
-VIDEO (MIK BHAIYA):
+PROBLEM :https://leetcode.com/problems/house-robber/?envType=daily-question&envId=2024-01-21
+VIDEO (MIK BHAIYA):https://www.youtube.com/watch?v=SI6Pm8AKqnQ
+Problem Name : House Robber
+Company Tags  : Amazon, OYO Rooms, Paytm, Walmart, Google, Flipkart, LinkedIn, Airbnb
 
 /*
   BRUTE FORCE
@@ -50,6 +52,41 @@ public:
         n=nums.size();
         memset(dp,-1,sizeof(dp));
         return solve(0,nums);
+    }
+};
+
+/*
+
+  BOTTOM UP
+  TC: o(n)
+  SC: o(n)
+  */
+
+class Solution {
+public:
+    int rob(vector<int>& nums) {
+        int  n=nums.size();
+        if(n==1)return nums[0];
+
+        vector<int>dp(n+1,0);
+
+        //defining a state...dp[i] =max stolen money till ith house
+
+        //dp[0] ...zero house
+        dp[0]=0;
+
+        // dp[1]...one house
+
+        dp[1]=nums[0];
+
+        for(int i=2;i<=n;i++){
+            int steal=nums[i-1]+dp[i-2];
+            int skip= dp[i-1];
+
+            dp[i]=max(steal,skip);
+        }
+
+        return dp[n];
     }
 };
 
