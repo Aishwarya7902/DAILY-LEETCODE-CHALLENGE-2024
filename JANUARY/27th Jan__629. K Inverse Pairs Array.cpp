@@ -1,5 +1,6 @@
 PROBLEM :https://leetcode.com/problems/k-inverse-pairs-array/description/?envType=daily-question&envId=2024-01-27
-VIDEO (MIK BHAIYA):   (BEST EXPLANATION ON WHOLE YOUTUBE)
+VIDEO (MIK BHAIYA):  https://www.youtube.com/watch?v=y9yo1kyW7Bg
+(BEST EXPLANATION ON WHOLE YOUTUBE)
 
 
   /*
@@ -99,6 +100,45 @@ public:
                   result=(result%MOD +(t[i-1][j-inv])%MOD)%MOD;
               }
             t[i][j]=result;
+          }
+      }
+      return t[n][k];  
+    }
+};
+
+
+/*
+space optimisation 
+TC:o(n*k)
+SC:o(n*k)
+*/
+
+class Solution {
+public:
+    int MOD=1e9+7;
+    int kInversePairs(int n, int k) {
+      vector<vector<int>>t(n+1,vector<int>(k+1));
+
+      /*
+      defining a state
+      t[i][j]= total no. of arrays of size i with exactly j inversions
+
+      */
+
+      //if inversion=0 it means we have one possible way
+
+      for(int i=0;i<=n;i++){
+          t[i][0]=1;
+      }
+
+      for(int i=1;i<=n;i++){
+          long long cumulativeSum=1;
+          for(int j=1;j<=k;j++){
+              cumulativeSum+=t[i-1][j];
+              if(j>=i)
+               cumulativeSum-=t[i-1][j-i];
+
+            t[i][j]=cumulativeSum%MOD;
           }
       }
       return t[n][k];  
