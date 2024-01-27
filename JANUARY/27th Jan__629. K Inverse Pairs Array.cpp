@@ -65,3 +65,42 @@ public:
         return solve(n,k);
     }
 };
+
+
+/*
+BOTTOM UP
+SC:O(n*k)
+TC: at max we are visiting (n*k) states....and for every state we have at max (n-1) inversions possible 
+    O(n*k*(n-1))
+*/
+
+class Solution {
+public:
+    int MOD=1e9+7;
+    int kInversePairs(int n, int k) {
+      vector<vector<int>>t(n+1,vector<int>(k+1));
+
+      /*
+      defining a state
+      t[i][j]= total no. of arrays of size i with exactly j inversions
+
+      */
+
+      //if inversion=0 it means we have one possible way
+
+      for(int i=0;i<=n;i++){
+          t[i][0]=1;
+      }
+
+      for(int i=1;i<=n;i++){
+          for(int j=1;j<=k;j++){
+              int result=0;
+              for(int inv=0;inv<=min(j,i-1);inv++){
+                  result=(result%MOD +(t[i-1][j-inv])%MOD)%MOD;
+              }
+            t[i][j]=result;
+          }
+      }
+      return t[n][k];  
+    }
+};
