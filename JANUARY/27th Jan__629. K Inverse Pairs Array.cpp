@@ -31,3 +31,37 @@ public:
         return solve(n,k);
     }
 };
+
+
+
+/*
+
+MEMOIZATION
+SC:O(n*k)
+TC: at max we are visiting (n*k) states....and for every state we have at max (n-1) inversions possible 
+    O(n*k*(n-1))
+*/
+
+class Solution {
+public:
+    int MOD=1e9+7;
+    int dp[1001][1001];
+    int solve(int n,int k){
+        if(n==0)return 0;
+        if(k==0){//it means no inversion is required
+            return 1;
+        }
+        if(dp[n][k]!=-1)return dp[n][k];
+
+        int result=0;
+        //for an array of length n ...u can have at max (n-1) inversion
+        for(int inv=0;inv<=min(k,n-1);inv++){
+            result = (result%MOD+solve(n-1,k-inv)%MOD)%MOD;//I already have inv inversions...now I need (k-inv) inversions
+        }
+        return dp[n][k]=result;
+    }
+    int kInversePairs(int n, int k) {
+        memset(dp,-1,sizeof(dp));
+        return solve(n,k);
+    }
+};
