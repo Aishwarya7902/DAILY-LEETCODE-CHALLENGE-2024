@@ -4,7 +4,7 @@ VIDEO : https://www.youtube.com/watch?v=vqLiP9cdDLA
 
 
 /*
-  APPROACH 1
+  APPROACH 1 (solved  myself)
   */
 
 //TC :O(n)
