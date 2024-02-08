@@ -1,6 +1,7 @@
 PROBLEM :https://leetcode.com/problems/perfect-squares/?envType=daily-question&envId=2024-02-08
 Problem Name : Perfect Squares 
 Company Tags  : Google, Salesforce, Microsoft, Meta, Amazon
+Frequency     : 74%
   
 VIDEO :
 1.RECURSION + MEMO
@@ -37,9 +38,9 @@ public:
 
 /*
 MEMOIZATION
-
-TC:
-SC:
+This question is nothing but just similar to of "Minimum Coins to get sum S (COIN CHANGE - Leetcode : 322)
+TC:O(n*S) - Where n = total coins possible and S = target sum
+SC:O(n*S)
 */
 
 class Solution {
@@ -60,5 +61,33 @@ public:
         memset(dp,-1,sizeof(dp));
         return solve(n);
 
+    }
+};
+
+
+/*
+
+BOTTOM UP
+TC:O(N*N)
+SC:O(N)
+*/
+
+class Solution {
+public:
+    int numSquares(int n) {
+        vector<int>dp(n+1,100000);
+
+        //defining states
+        //dp[i]= minimum no. of perfect squares to get i
+        // return dp[n]
+
+       dp[0]=0;
+       for(int i=1;i<=n;i++){
+           for(int j=1;j*j<=i;j++){
+               dp[i]=min(dp[i],1+dp[i-j*j]);
+           }
+       }
+
+       return dp[n];
     }
 };
