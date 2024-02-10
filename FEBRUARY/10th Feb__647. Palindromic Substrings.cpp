@@ -1,6 +1,10 @@
 PROBLEM :  https://leetcode.com/problems/palindromic-substrings/?envType=daily-question&envId=2024-02-10
 
-VIDEO :
+VIDEO : https://www.youtube.com/watch?v=tGAMyZxlwuA
+
+
+Problem Name : Palindromic Substrings
+Company Tags  : Google
 
 /*
   BRUTE FORCE (SOLVED ON MY OWN 😎)
