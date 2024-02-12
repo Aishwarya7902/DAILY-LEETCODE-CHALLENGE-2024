@@ -1,5 +1,5 @@
 PROBLEM :https://leetcode.com/problems/majority-element/description/?envType=daily-question&envId=2024-02-12
-VIDEO:
+VIDEO:https://www.youtube.com/watch?v=Q6L5SoS-fTo
 
 /*
   BRUTE FORCE (DID BY MYSELF)
@@ -22,5 +22,32 @@ public:
         }
         return -1;
         
+    }
+};
+
+/*
+
+OPTIMISATION
+TC: O(N)
+SC: O(1)
+*/
+
+class Solution {
+public:
+    int majorityElement(vector<int>& nums) {
+        int n=nums.size();
+        int count=0;
+        int maj=NULL;
+        for(int i=0;i<n;i++){
+            if(count==0){
+                count=1;
+                maj=nums[i];
+            }
+            else if(nums[i]==maj)count++;
+            else 
+             count--;
+        }
+
+        return maj;
     }
 };
