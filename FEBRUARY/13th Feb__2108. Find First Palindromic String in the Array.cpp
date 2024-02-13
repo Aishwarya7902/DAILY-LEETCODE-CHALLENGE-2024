@@ -1,6 +1,6 @@
 PROBLEM : https://leetcode.com/problems/find-first-palindromic-string-in-the-array/description/?envType=daily-question&envId=2024-02-13
 
-VIDEO :
+VIDEO :https://www.youtube.com/watch?v=JPB_lLGSgnc
 
 /*
   BRUTE FORCE (SOLVED ON MY OWN)
@@ -62,6 +62,27 @@ public:
     bool isPalindrome(string &str){
         
       return str==(string(rbegin(str),rend(str)));
+    }
+    string firstPalindrome(vector<string>& words) {
+        for(int i=0;i<words.size();i++){ 
+            if(isPalindrome(words[i]))return words[i];
+        }
+        return "";
+    }
+};
+
+
+/*
+METHOD 4:
+*/
+
+class Solution {
+public:
+    bool isPalindrome(string &str){
+        int n=str.size();
+        if(equal(str.begin(),str.begin()+n/2,str.rbegin()))return true;
+
+        return false;
     }
     string firstPalindrome(vector<string>& words) {
         for(int i=0;i<words.size();i++){ 
