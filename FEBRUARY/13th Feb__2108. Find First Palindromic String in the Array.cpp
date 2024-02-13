@@ -29,3 +29,25 @@ public:
         return "";
     }
 };
+
+
+/*
+METHOD 2 
+REVERSE METHOD
+  */
+
+class Solution {
+public:
+    bool isPalindrome(string &str){
+        
+      string temp=str;
+      reverse(temp.begin(),temp.end());
+      return str==temp;
+    }
+    string firstPalindrome(vector<string>& words) {
+        for(int i=0;i<words.size();i++){ 
+            if(isPalindrome(words[i]))return words[i];
+        }
+        return "";
+    }
+};
