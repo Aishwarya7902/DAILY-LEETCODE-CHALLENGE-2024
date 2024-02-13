@@ -51,3 +51,22 @@ public:
         return "";
     }
 };
+
+
+/*
+
+METHOD 3
+  */
+class Solution {
+public:
+    bool isPalindrome(string &str){
+        
+      return str==(string(rbegin(str),rend(str)));
+    }
+    string firstPalindrome(vector<string>& words) {
+        for(int i=0;i<words.size();i++){ 
+            if(isPalindrome(words[i]))return words[i];
+        }
+        return "";
+    }
+};
