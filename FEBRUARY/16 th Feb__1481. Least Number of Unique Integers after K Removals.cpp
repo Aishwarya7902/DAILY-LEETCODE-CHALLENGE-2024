@@ -23,6 +23,9 @@ Dosh
   1. Use a map to count the frequencies of the numbers in the array.
   2. An optimal strategy is to remove the numbers with the smallest count first.
 
+  TC: O(nlogn) + O(n)+ O(k)
+  SC : O(n) + O(n)
+
   */
 
 class Solution {
