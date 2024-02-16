@@ -15,7 +15,7 @@ Expedia
 2
 Dosh
 */
-
+******************************************************************  SELF ********************************************************************************************
 
 /*
   BRUTE FORCE (SOLVED ON MY OWN)
@@ -103,5 +103,43 @@ public:
       }
 
       return pq.size();
+    }
+};
+
+
+***************************************************************  LEARNINGS *******************************************************************************************
+
+  /*
+  brute force
+  tc:o(nlogn)
+  sc:o(n)
+  */
+
+  class Solution {
+public:
+    int findLeastNumOfUniqueInts(vector<int>& arr, int k) {
+        unordered_map<int,int>mp;
+
+        for(int &x:arr){
+            mp[x]++;
+        }
+
+        vector<int>freq;
+
+        for(auto it:mp){
+            // it.first= element
+            // it.second= freq
+            // we are only concerned with the freq not the element
+
+            freq.push_back(it.second);
+        }
+        sort(begin(freq),end(freq));
+        for(int i=0;i<freq.size();i++){
+            k-=freq[i];
+
+            if(k<0)return freq.size()-i;
+        }
+
+     return 0 ;// no elements were left ...all deleted
     }
 };
