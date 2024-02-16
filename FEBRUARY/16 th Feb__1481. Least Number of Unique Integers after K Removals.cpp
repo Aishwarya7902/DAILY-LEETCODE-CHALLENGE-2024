@@ -64,3 +64,44 @@ public:
       return vec.size();
     }
 };
+
+
+/*
+METHOD 2
+WITHOUT SORTING
+  */
+class Solution {
+public:
+    typedef pair<int,int>P;
+    int findLeastNumOfUniqueInts(vector<int>& arr, int k) {
+     unordered_map<int,int>mp; //SC:O(n)
+     priority_queue<P,vector<P>,greater<P>>pq; //SC:O(n)
+
+
+      for(auto it:arr){ //TC:O(n)
+          mp[it]++;
+      }
+
+      for(auto it:mp){ //TC:O(n)
+          int num=it.first;
+          int freq=it.second;
+
+          pq.push({freq,num});
+      }
+
+      
+      
+      while(k>0){ //TC:O(k)
+        
+        if(k>=pq.top().first){
+            k-=pq.top().first;
+            pq.pop();
+        }
+       else{
+           break;
+       }
+      }
+
+      return pq.size();
+    }
+};
