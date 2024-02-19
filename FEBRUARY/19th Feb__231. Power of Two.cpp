@@ -78,3 +78,21 @@ public:
     return (n &(n-1))==0;
     }
 };
+
+/*
+
+APPROACH 3
+BUILT IN FUNCTION
+  TC: logn base 2
+  SC: O(1)
+  */
+
+class Solution {
+public:
+    bool isPowerOfTwo(int n) {   
+    if(n<=0)return false;
+    int count=__builtin_popcount(n);//this built in function return number of set bit in n
+    //if a no is a power of 2 then set bit will always be 1
+     return count==1;
+    }
+};
