@@ -49,3 +49,32 @@ public:
         return n==1;
     }
 };
+
+
+/*
+
+METHOD 2
+BIT MAGIC
+TC : O(1)
+SC : O(1)
+  */
+
+class Solution {
+public:
+
+ // the bit of n-1 will be all set expect
+    // places which n has set for all n which is a power of 2
+
+    /*
+    eg 4= 100
+       3= 011
+    and when we take and then it will be zero
+     (100) && (011) is 0
+     hence n which was 4 is a power of 2
+     */
+
+    bool isPowerOfTwo(int n) {   
+    if(n<=0)return false;
+    return (n &(n-1))==0;
+    }
+};
