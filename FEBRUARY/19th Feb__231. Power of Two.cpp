@@ -96,3 +96,17 @@ public:
      return count==1;
     }
 };
+
+/*
+METHOD 4
+  TC:O(1)
+  SC:O(1)
+  */
+  class Solution {
+public:
+    bool isPowerOfTwo(int n) {
+        if(n<=0)return false;
+        int curr = pow(2,30);
+        return curr%n==0;
+    }
+};
