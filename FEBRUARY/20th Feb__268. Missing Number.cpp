@@ -104,3 +104,26 @@ public:
         return requiredSum-currSum;
     }
 };
+
+
+/*
+ APPROACH 4
+ TC: O(N)
+ SC: O(1)
+  */
+
+class Solution {
+public:
+    int missingNumber(vector<int>& nums) {
+        // 1^1=0
+        // 0^2=2
+        int n=nums.size();
+        int result=n;
+
+        for(int i=0;i<n;i++){
+            result=result^i;
+            result=result^nums[i];
+        }
+        return result;
+    }
+};
