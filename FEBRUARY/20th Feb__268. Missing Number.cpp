@@ -55,3 +55,31 @@ public:
         return n;
     }
 };
+
+
+/*
+
+METHOD 2
+USING SET
+TC: O(N)
+SC: O(N)
+*/
+
+class Solution {
+public:
+    int missingNumber(vector<int>& nums) {
+        int n=nums.size();
+        unordered_set<int>s;
+        for(auto it:nums)
+        {
+          s.insert(it);
+        }
+         
+
+        for(int i=0;i<=n;i++){ // TC:O(n)
+            if(s.find(i)==s.end())return i;
+        }
+
+        return -1;
+    }
+};
