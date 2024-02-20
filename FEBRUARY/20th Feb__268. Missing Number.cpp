@@ -1,6 +1,6 @@
 PROBLEM :https://leetcode.com/problems/missing-number/description/?envType=daily-question&envId=2024-02-20
 
-VIDEO : 
+VIDEO : https://www.youtube.com/watch?v=lpyQGkbDvqI
 /*
 Companies
 0 - 6 months
@@ -81,5 +81,26 @@ public:
         }
 
         return -1;
+    }
+};
+
+
+/*
+APPROACH 3
+USING MATHS
+TC: O(N)
+SC:O(1)
+  */
+
+class Solution {
+public:
+    int missingNumber(vector<int>& nums) {
+        int n=nums.size();
+        int requiredSum=(n*(n+1))/2; // SUM OF FIRST N NATURAL NUMBERS
+        int currSum=0;
+        for(int x:nums)
+         currSum+=x;
+        
+        return requiredSum-currSum;
     }
 };
