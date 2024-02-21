@@ -1,6 +1,21 @@
 PROBLEM :https://leetcode.com/problems/bitwise-and-of-numbers-range/description/?envType=daily-question&envId=2024-02-21
 
-VIDEO:
+VIDEO:https://www.youtube.com/watch?v=3XYQLHSoew8
+
+/*
+Companies
+6 months - 1 year
+Google
+2
+1 year - 2 years
+Apple
+2
+Amazon
+2
+Yahoo
+2
+*/
+
 
 /*
   APPROACH 1
@@ -33,7 +48,7 @@ public:
     int rangeBitwiseAnd(int left, int right) {
        while(right>left){
 
-           right=(right&(right-1));
+           right=(right&(right-1));  // n&(n-1)
        }
        return right;
     }
