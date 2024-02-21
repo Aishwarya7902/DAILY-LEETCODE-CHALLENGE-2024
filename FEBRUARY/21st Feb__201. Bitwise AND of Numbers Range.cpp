@@ -21,3 +21,20 @@ public:
      return (left<<shiftCount);
     }
 };
+
+/*
+
+APPROACH 2
+  */
+
+class Solution {
+public:
+    // TC :O(log(n) base 2)
+    int rangeBitwiseAnd(int left, int right) {
+       while(right>left){
+
+           right=(right&(right-1));
+       }
+       return right;
+    }
+};
