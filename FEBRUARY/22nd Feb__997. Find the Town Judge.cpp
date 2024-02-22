@@ -1,5 +1,26 @@
 PROBLEM :https://leetcode.com/problems/find-the-town-judge/description/?envType=daily-question&envId=2024-02-22
-VIDEO :
+VIDEO : https://www.youtube.com/results?search_query=Find+the+Town+Judge
+
+/*
+Companies
+0 - 6 months
+Amazon
+2
+turing
+2
+6 months - 1 year
+Adobe
+2
+1 year - 2 years
+Apple
+3
+Bloomberg
+2
+Walmart Labs
+2
+Arista
+Arista Networks
+*/
 
 
 /*
@@ -26,6 +47,32 @@ public:
 
         for(int i=1;i<=n;i++){
             if(trusts[i]==0 && trustedBy[i]==n-1)return i;
+        }
+        return -1;
+
+    }
+};
+
+/*
+
+APPROACH 2
+  */
+
+class Solution {
+public:
+    int findJudge(int n, vector<vector<int>>& trust) {
+        vector<int>Count(n+1); 
+        for(auto &vec:trust){
+            // u->v
+            int u=vec[0];
+            int v=vec[1];
+
+            Count[u]--;
+            Count[v]++;
+        }
+
+        for(int i=1;i<=n;i++){
+            if(Count[i]==n-1)return i;
         }
         return -1;
 
