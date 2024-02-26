@@ -3,6 +3,29 @@ PROBLEM :https://leetcode.com/problems/same-tree/description/?envType=daily-ques
 VIDEO :
 
 /*
+Companies
+0 - 6 months
+Amazon
+3
+Google
+3
+LinkedIn
+2
+Microsoft
+2
+tcs
+2
+1 year - 2 years
+Apple
+7
+Adobe
+3
+Facebook
+2
+Bloomberg
+*/
+
+/*
 
   BRUTE FORCE
   TC:O(N)
