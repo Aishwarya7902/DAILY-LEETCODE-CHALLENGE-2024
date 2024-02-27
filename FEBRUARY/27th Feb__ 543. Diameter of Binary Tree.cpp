@@ -5,6 +5,32 @@ VIDEO: https://www.youtube.com/watch?v=15KwRECEXLU
 Problem Name : Diameter of Binary Tree
 Company Tags  : Amazon, Cadence India, Directi, MakeMyTrip, Microsoft, Oracle, OYO Rooms, Philips, Salesforce, Snapdeal, VMWare
 
+  /*
+  Companies
+0 - 6 months
+Facebook
+55
+Amazon
+6
+Google
+3
+Bloomberg
+2
+Apple
+2
+6 months - 1 year
+Adobe
+2
+1 year - 2 years
+Uber
+3
+Microsoft
+2
+Oracle
+2
+Wix
+*/
+
 /*
   TC:O(N)
   SC:O(1)// Auxiliary space
