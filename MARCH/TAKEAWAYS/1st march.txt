@@ -1,0 +1,8 @@
+How can we get ......????
+
+1. odd no
+ The binary representation of an odd number contains '1' in the least significant place.
+
+2. largest odd no
+
+The binary representation of an odd number contains  one '1' in the least significant place and rest '1' in the most significant place.
