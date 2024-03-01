@@ -35,3 +35,29 @@ public:
         return result;
     }
 };
+
+
+/*
+APPROACH 2
+TC: O(N)
+S:O(N)
+  */
+
+class Solution {
+public:
+    string maximumOddBinaryNumber(string s) {
+        int n=s.size();
+        string result=string(n,'0');
+        int j=0;
+        //The binary representation of an odd number contains  one '1' in the least significant place and rest '1' in the most significant place.
+        int count_1=count(s.begin(),s.end(),'1');
+        while(count_1>1){
+            result[j]='1';
+            j++;
+            count_1--;
+        }
+
+        result[n-1]='1';
+        return result;
+    }
+};
