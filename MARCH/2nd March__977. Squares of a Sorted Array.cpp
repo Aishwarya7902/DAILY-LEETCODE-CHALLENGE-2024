@@ -1,6 +1,36 @@
 PROBLEM :https://leetcode.com/problems/squares-of-a-sorted-array/description/?envType=daily-question&envId=2024-03-02
 
 VIDEO:
+/*
+Companies
+0 - 6 months
+Facebook
+10
+Yandex
+3
+Google
+2
+Amazon
+2
+Bloomberg
+2
+Tinkoff
+2
+6 months - 1 year
+Yahoo
+2
+1 year - 2 years
+Microsoft
+5
+Apple
+4
+Uber
+3
+PayPal
+2
+Walmart Labs
+2
+*/
 
 /*
   BRUTE FORCE
