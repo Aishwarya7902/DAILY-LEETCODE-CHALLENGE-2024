@@ -16,3 +16,34 @@ public:
         return result;
     }
 };
+
+
+/*
+IMPROVED SOLUTION (TWO POINTER APPROACH)
+TC:O(N)
+SC:O(N) if you take output into account and O(1) otherwise.
+*/
+
+class Solution {
+public:
+    vector<int> sortedSquares(vector<int>& nums) {
+        int n=nums.size();
+        vector<int>result(n);
+        int left=0,right=n-1;
+        int j=n-1;
+        while(left<=right){
+            if(abs(nums[left])>abs(nums[right])){
+                result[j]=nums[left]*nums[left];
+                left++;
+            }
+
+            else{
+                result[j]=nums[right]*nums[right];
+                right--;
+            }
+            j--;
+        }
+
+        return result;
+    }
+};
