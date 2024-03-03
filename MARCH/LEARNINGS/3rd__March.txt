@@ -1,0 +1,12 @@
+WhenEver in Linked List
+ -> Insertion
+ -> Deletion
+
+ Think of corner cases
+
+ length of Linked list =L
+ nth node from end
+
+ (.) what if n>L ???   ....it's an invalid case
+ (.) what if (n==L) ??? .....return head->next
+ 
