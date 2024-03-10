@@ -1,6 +1,37 @@
 problem :https://leetcode.com/problems/intersection-of-two-arrays/description/?envType=daily-question&envId=2024-03-10
 
-video :
+video :https://www.youtube.com/watch?v=rqPu9ZvLdi0
+
+/*
+Companies
+0 - 6 months
+Amazon
+5
+Apple
+5
+Microsoft
+4
+LinkedIn
+4
+JPMorgan
+2
+Yandex
+2
+Criteo
+2
+6 months - 1 year
+Adobe
+4
+Google
+2
+Facebook
+2
+1 year - 2 years
+Bloomberg
+4
+Two Sigma
+Wix
+*/
 
 /*
 
