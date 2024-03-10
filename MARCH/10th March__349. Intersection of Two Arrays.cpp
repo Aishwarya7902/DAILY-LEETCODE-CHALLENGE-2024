@@ -34,9 +34,41 @@ public:
 
 /*
 APPROACH 2:
-TC:O(M+N)
-SC:O(M)
-
+TC:o(mlogm) + o(nlogn) + o(m+n)
+SC: o(1)
 */
+
+class Solution {
+public:
+    vector<int> intersection(vector<int>& nums1, vector<int>& nums2) {
+        sort(begin(nums1),end(nums1)); //mlogm
+        sort(begin(nums2),end(nums2)); //nlogn
+        
+        vector<int> result;
+        int m=nums1.size();
+        int n=nums2.size();
+
+        int i=0,j=0;
+        while(i<m && j<n){ //o(m+n)
+            if(nums1[i]<nums2[j]){
+                i++;
+            }
+
+            else if(nums1[i]>nums2[j]){
+                j++;
+            }
+
+            else if(nums1[i]==nums2[j] ){
+               if(result.size()==0) result.push_back(nums1[i]);
+               else if(nums1[i]!=result.back()) result.push_back(nums1[i]);
+                i++;
+                j++;
+            }
+            
+        }
+    return result;
+
+    }
+};
 
 
