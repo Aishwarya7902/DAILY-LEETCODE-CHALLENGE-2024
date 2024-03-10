@@ -103,4 +103,37 @@ public:
     }
 };
 
+/*
+APPROACH 4
+  BINARY SEARCH
+  TC:O(mlogm) + o(n*logm)
+  SC:o(n)
+*/
 
+class Solution {
+public:
+    bool binarySearch(int target,vector<int>& nums){
+        int l=0,r=nums.size()-1;
+        while(l<=r){
+            int mid=l+(r-l)/2;
+            if(nums[mid]==target)return true;
+            else if(nums[mid]<target)l=mid+1;
+            else r=mid-1;
+        }
+        return false;
+    }
+    vector<int> intersection(vector<int>& nums1, vector<int>& nums2) {
+        sort(begin(nums1),end(nums1)); //mlogm
+        vector<int> result;
+        unordered_set<int>st;
+        for(auto num:nums2){
+            if(binarySearch(num,nums1))
+             st.insert(num);
+        }
+         for(auto it:st)
+          result.push_back(it);
+        
+    return result;
+
+    }
+};
