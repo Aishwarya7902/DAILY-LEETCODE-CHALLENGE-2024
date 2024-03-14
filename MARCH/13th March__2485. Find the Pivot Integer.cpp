@@ -85,3 +85,25 @@ public:
        return -1;
     }
 };
+
+
+/*
+APPROACH 3
+USING MATHS
+TC:O(N)
+SC:O(1)
+  */
+
+class Solution {
+public:
+   
+    int pivotInteger(int n) {
+       int totalSum=(n*(n+1))/2; //formula for sum of first n natural numbers
+       for(int x=1;x<=n;x++){
+        int sumOneToX=(x*(x+1))/2;
+        int sumXToN=totalSum-sumOneToX+x;
+        if(sumOneToX==sumXToN)return x;
+       }
+       return -1;
+    }
+};
