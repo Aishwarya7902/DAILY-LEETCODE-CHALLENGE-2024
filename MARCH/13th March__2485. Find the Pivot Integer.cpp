@@ -107,3 +107,36 @@ public:
        return -1;
     }
 };
+
+
+/*
+APPROACH 4
+PURE MATHS
+TC:O(1)
+SC:O(1)
+  */
+
+class Solution {
+public:
+   
+    int pivotInteger(int n) {
+       int totalSum=n*(n+1)/2; //formula for sum of first n natural numbers
+       /*
+       proof:
+       x is the pivot here
+       sum[1 to x]=sum[x to n]
+       sum[1 to x]=sum[1 to n] - sum[1 to x] + x
+       x*(x+1)/2= n*(n+1)/2- x*(x+1)/2+x
+
+       so after solving
+       pivot=sqrt(n*(n+1)/2);
+       n*(n+1)/2 is the total sum
+       pivot=sqrt(total sum);
+
+       pivot^2=total sum
+       */
+
+       int pivot=sqrt(totalSum);
+      return pivot*pivot==totalSum ? pivot : -1;
+    }
+};
