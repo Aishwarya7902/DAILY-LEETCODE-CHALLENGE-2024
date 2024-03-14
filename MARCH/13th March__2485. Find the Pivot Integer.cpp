@@ -1,5 +1,12 @@
 PROBLEM :https://leetcode.com/problems/find-the-pivot-integer/description/?envType=daily-question&envId=2024-03-13
 VIDEO :
+/*
+Companies
+1 year - 2 years
+Apple
+2
+Amazon
+*/
 
 
 /*
@@ -46,6 +53,33 @@ public:
     int pivotInteger(int n) {
        for(int  x=1;x<=n;x++){
         if(findSum(1,x)==findSum(x,n))return x;
+       } 
+
+       return -1;
+    }
+};
+
+
+/*
+APPROACH 2
+USING PREFIX SUM
+TC:O(N)
+SC:O(N)
+*/
+
+class Solution {
+public:
+   
+    int pivotInteger(int n) {
+      vector<int>prefixSum(n+1,0);
+      int sum=0;
+      for(int i=1;i<=n;i++){
+        sum+=i;
+        prefixSum[i]=sum;
+      }
+
+       for(int  x=1;x<=n;x++){
+        if(prefixSum[x]==((prefixSum[n]-prefixSum[x])+x))return x;
        } 
 
        return -1;
