@@ -140,3 +140,58 @@ public:
       return pivot*pivot==totalSum ? pivot : -1;
     }
 };
+
+
+/*
+USING TWO POINTER
+TC:O(N)
+SC:O(1)
+*/
+class Solution {
+public:
+    int pivotInteger(int n) {
+       int i=1;
+       int j=n;
+       int leftsum=1;
+       int rightsum=n;
+       while(i<j){
+
+        if(leftsum<rightsum){
+            i++;
+            leftsum+=i;
+        }
+
+        else{
+            j--;
+            rightsum+=j;
+        }
+       } 
+       return leftsum==rightsum ? i :-1;
+    }
+};
+
+/*
+
+USING BINARY SEARCH (SINCE SORTED)
+TC:O(logn)
+Sc:O(1)
+*/
+
+class Solution {
+public:
+    int pivotInteger(int n) {
+         int totalSum=n*(n+1)/2;
+         int left=1;
+         int right=n;
+         while(left<=right){
+            int mid_pivot=left+(right-left)/2;
+            if(mid_pivot*mid_pivot==totalSum)return mid_pivot;
+
+            else if(mid_pivot*mid_pivot<totalSum)
+              left=mid_pivot+1;
+            else
+             right=mid_pivot-1;
+         }
+         return -1;
+    }
+};
