@@ -1,6 +1,10 @@
 PROBLEM :https://leetcode.com/problems/reverse-linked-list/description/?envType=daily-question&envId=2024-03-21
 
-VIDEO :
+VIDEO : https://www.youtube.com/watch?v=RreHsOfi14w
+
+Problem Name : Reverse Linked List
+
+Company Tags  : Google, Amazon, D.E. Shaw , Microsoft
 
 /*
   BRUTE FORCE (OWN)
