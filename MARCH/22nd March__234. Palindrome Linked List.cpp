@@ -86,3 +86,26 @@ public:
 
     }
 };
+
+/*
+METHOD 3:
+TC:O(N)
+SC:O(1)
+   */
+
+class Solution {
+public:
+    ListNode* curr;
+    bool Recur(ListNode* head){
+        if(head==NULL)return true;
+
+        bool ans=Recur(head->next);
+        if(head->val!=curr->val)return false;
+        curr=curr->next;
+        return ans;
+    }
+    bool isPalindrome(ListNode* head) {
+        curr=head;
+        return Recur(head);
+    }
+};
