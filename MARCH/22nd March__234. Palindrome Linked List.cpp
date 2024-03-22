@@ -1,6 +1,7 @@
 PROBLEM :https://leetcode.com/problems/palindrome-linked-list/description/?envType=daily-question&envId=2024-03-22
 
-VIDEO :
+VIDEO :https://www.youtube.com/watch?v=Sgi2BHiW0-Q
+Company Tags  : GOOGLE
 
 /*
    BRUTE FORCE (OWN)
