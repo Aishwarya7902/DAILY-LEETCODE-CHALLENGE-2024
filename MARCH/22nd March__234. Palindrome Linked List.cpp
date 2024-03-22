@@ -34,3 +34,55 @@ public:
         return isPalindrome(s);
     }
 };
+
+
+/*
+
+SPACE OPTIMISATION
+TC:O(N)
+SC:O(1)
+*/
+
+class Solution {
+public:
+    ListNode* ReverseLL(ListNode* node){
+        if(!node || !node->next)return node;
+        ListNode* temp=node->next;
+        node->next=NULL;
+        ListNode* ans=ReverseLL(temp);
+        temp->next=node;
+        return ans;
+
+
+    }
+    ListNode* findMid(ListNode* head,ListNode* prev){
+        ListNode* slow=head;
+        ListNode* fast=head;
+        while(fast && fast->next){
+            prev=slow;
+            slow=slow->next;
+            fast=fast->next->next;
+        }
+        return slow;
+    }
+    bool isPalindrome(ListNode* head) {
+        /*
+        story
+        ->find mid ✅
+        ->reverse LL ✅
+        ->check palindrome ✅
+        */
+     ListNode* mid=NULL;
+     ListNode* prev=NULL;
+     mid=findMid(head,prev); //step 1
+     ListNode* tail=ReverseLL(mid); // step 2
+     while(head && tail){ //step 3
+        if(head->val!=tail->val)return false;
+        head=head->next;
+        tail=tail->next;
+     }
+
+     return true;
+
+    }
+};
