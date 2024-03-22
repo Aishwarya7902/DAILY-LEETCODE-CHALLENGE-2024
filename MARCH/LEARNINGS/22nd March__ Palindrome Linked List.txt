@@ -1,0 +1,3 @@
+✅ while doing slow and fast pointer
+if length is even then at last fast will point to NULL
+else it will point to last node
