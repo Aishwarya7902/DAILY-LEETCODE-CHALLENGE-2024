@@ -55,3 +55,32 @@ public:
         return result;
     }
 };
+
+/*
+APPROACH 3
+TC:O(N)
+SC:O(1)
+  */
+
+class Solution {
+public:
+/*
+Pattern :
+if n sized array and numbers are in range 1 to n
+Then there is a hint ❤️
+-> USE THE NUMBERS AS INDEX
+*/
+    vector<int> findDuplicates(vector<int>& nums) {
+        vector<int>result;
+        int n=nums.size();
+        for(int i=0;i<n;i++){
+            int num=abs(nums[i]);
+            int indx=num-1;
+
+            if(nums[indx]<0)result.push_back(num);
+            else 
+             nums[indx]*=-1;
+        }
+        return result;
+    }
+};
