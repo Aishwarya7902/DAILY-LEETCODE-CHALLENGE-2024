@@ -1,6 +1,7 @@
 PROBLEM :https://leetcode.com/problems/find-all-duplicates-in-an-array/description/?envType=daily-question&envId=2024-03-25
 
-VIDEO:
+VIDEO: https://www.youtube.com/watch?v=NqadCpaZnkk
+Company Tags  : Pocket Gems, Amazon, Meta
 
 
 
