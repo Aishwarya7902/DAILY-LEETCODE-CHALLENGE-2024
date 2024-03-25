@@ -31,3 +31,27 @@ public:
         return result;
     }
 };
+
+
+/*
+ APPROACH 2:
+*/
+
+class Solution {
+public:
+    vector<int> findDuplicates(vector<int>& nums) {
+        vector<int>result;
+        /*
+         story :-
+         1.sort
+         2.if repeated put in result
+        */
+
+        sort(begin(nums),end(nums));//nlogn
+        for(int i=1;i<nums.size();i++){
+            if(nums[i]==nums[i-1])result.push_back(nums[i]);
+        }
+
+        return result;
+    }
+};
