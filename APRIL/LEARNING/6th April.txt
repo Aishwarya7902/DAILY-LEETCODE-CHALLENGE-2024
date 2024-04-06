@@ -1,0 +1,13 @@
+✅ 1. for valid paranthesis u can use a stack<char> .........and at last if it is invalid then something will still be left in the stack at the end.
+
+But if u want to find out at which place there was an invalid stack........then u can store index ....rather than the character.
+
+
+2. now to find out at which place invalid bracket was there ....u can transfer the elements of stack in some set.
+
+
+
+✅
+//iterating left to right (removes extra closing brackets)
+
+//iterating right to left (removes extra opening brackets) 
